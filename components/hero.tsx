@@ -5,12 +5,9 @@ export function Hero() {
     <section id="hero" className="relative section pt-28 md:pt-36">
       <div className="hero-bg" aria-hidden="true" />
       <div className="relative mx-auto max-w-6xl px-4 text-center">
-        <img
-          src="/images/leather-wood-logo.png"
-          alt="Leather & Wood Car Detailing logo"
-          className="mx-auto mb-6 h-16 w-auto md:h-20"
-        />
-        <h1 className="text-balance text-3xl font-semibold md:text-5xl">Experience the luxury your car deserves</h1>
+        <h1 className="text-balance text-3xl font-semibold md:text-5xl">
+          Experience the luxury your car deserves
+        </h1>
         <p className="mt-4 text-pretty text-base text-muted-foreground md:text-lg">
           Premium mobile car detailing across the Twin Cities metro—at prices that fit your budget.
         </p>
@@ -18,7 +15,7 @@ export function Hero() {
           <a href="#contact">
             <Button
               size="lg"
-              className="glow bg-primary text-primary-foreground hover:bg-[color-mix(in_oklch,var(--primary) 85%,black)]"
+              className="glow bg-primary text-primary-foreground hover:bg-[color-mix(in_oklch,var(--primary)_85%,black)]"
             >
               Book Now
             </Button>
