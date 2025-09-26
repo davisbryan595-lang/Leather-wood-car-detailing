@@ -1,30 +1,30 @@
-/* Scoped luxury theme (3-5 colors): primary gold, accent brown, neutrals black/gray/off-white */
+/* Scoped Leather & Wood luxury theme */
 .lw-theme {
   /* Neutrals */
-  --background: oklch(0.17 0.02 250); /* near-black charcoal */
-  --foreground: oklch(0.97 0.02 250); /* soft off-white */
-  --card: oklch(0.2 0.02 250);
+  --background: oklch(0.16 0.02 70);   /* deep leather charcoal */
+  --foreground: oklch(0.97 0.02 95);   /* warm off-white */
+  --card: oklch(0.20 0.03 70);         /* dark brown card */
   --card-foreground: var(--foreground);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
-  --border: oklch(0.28 0.015 250); /* muted graphite */
+  --border: oklch(0.32 0.02 70);       /* muted leather edge */
   --input: var(--border);
-  --ring: oklch(0.78 0.15 85); /* soft gold ring */
+  --ring: oklch(0.78 0.16 85);         /* soft gold ring */
 
   /* Brand */
-  --primary: oklch(0.78 0.17 85); /* warm metallic gold */
-  --primary-foreground: oklch(0.16 0.02 250);
-  --accent: oklch(0.55 0.08 70); /* rich brown (leather) */
+  --primary: oklch(0.78 0.17 85);      /* metallic gold (logo highlight) */
+  --primary-foreground: oklch(0.18 0.02 70);
+  --accent: oklch(0.55 0.10 55);       /* rich leather brown */
   --accent-foreground: oklch(0.98 0.02 95);
-  --secondary: oklch(0.23 0.015 250); /* dark gray panel */
+  --secondary: oklch(0.23 0.02 70);    /* panel brown/graphite */
   --secondary-foreground: var(--foreground);
 
-  /* Charts (kept in theme palette) */
+  /* Charts (still tied to brand palette) */
   --chart-1: var(--primary);
-  --chart-2: oklch(0.64 0.08 250);
-  --chart-3: oklch(0.44 0.04 250);
+  --chart-2: oklch(0.64 0.10 85);      /* muted gold tone */
+  --chart-3: oklch(0.44 0.04 70);      /* soft charcoal */
   --chart-4: var(--accent);
-  --chart-5: oklch(0.35 0.03 250);
+  --chart-5: oklch(0.36 0.03 55);      /* deeper leather brown */
 
   --radius: 0.625rem;
 }
@@ -42,7 +42,12 @@
 /* Subtle separator gradient for luxe look */
 .hr-gradient {
   height: 1px;
-  background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--primary) 45%, transparent), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklch, var(--primary) 45%, transparent),
+    transparent
+  );
 }
 
 /* Hero animated background */
@@ -53,8 +58,17 @@
       1200px 600px at 10% 20%,
       color-mix(in oklch, var(--primary) 10%, transparent),
       transparent 60%
-    ), radial-gradient(900px 500px at 90% 30%, color-mix(in oklch, var(--accent) 12%, transparent), transparent 60%),
-    repeating-linear-gradient(110deg, rgba(255, 255, 255, 0.03) 0 2px, transparent 2px 6px);
+    ),
+    radial-gradient(
+      900px 500px at 90% 30%,
+      color-mix(in oklch, var(--accent) 12%, transparent),
+      transparent 60%
+    ),
+    repeating-linear-gradient(
+      110deg,
+      rgba(255, 255, 255, 0.03) 0 2px,
+      transparent 2px 6px
+    );
   filter: saturate(105%);
   animation: drift 18s linear infinite;
   opacity: 0.5;
