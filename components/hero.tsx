@@ -4,16 +4,32 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative section min-h-screen flex items-center justify-center pt-48 md:pt-56 lg:pt-64"
+      className="relative section min-h-screen flex items-center justify-center text-center"
+      style={{
+        backgroundImage: "url('/heroimg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
-      <div className="hero-bg" aria-hidden="true" />
-      <div className="relative mx-auto max-w-6xl px-4 text-center">
-        <h1 className="text-balance text-3xl font-semibold md:text-5xl">
+      {/* Dark base overlay for readability */}
+      <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
+
+      {/* Brownish gradient fade overlay */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(80, 50, 20, 0.4), rgba(0, 0, 0, 0.6))",
+        }}
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 mx-auto max-w-4xl px-4">
+        <h1 className="text-balance text-3xl font-semibold md:text-5xl text-foreground">
           Experience the luxury your car deserves
         </h1>
         <p className="mt-4 text-pretty text-base text-muted-foreground md:text-lg">
-          Premium mobile car detailing across the Twin Cities metro—at prices
-          that fit your budget.
+          Premium mobile car detailing across the Twin Cities metro—at prices that fit your budget.
         </p>
         <div className="mt-8 flex items-center justify-center gap-3">
           <a href="#contact">
