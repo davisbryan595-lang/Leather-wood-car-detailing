@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative section pt-40 md:pt-48 lg:pt-56" // increased padding top for navbar offset
+      className="relative section min-h-screen flex items-center justify-center pt-48 md:pt-56 lg:pt-64"
     >
       <div className="hero-bg" aria-hidden="true" />
       <div className="relative mx-auto max-w-6xl px-4 text-center">
